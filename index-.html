@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="font2/iconfont.css">
+	<script src="js/jquery-1.12.2.js"></script>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix::before,
+		.clearfix::after {
+    		content: "";
+    		display: block;
+    		height: 0;
+    		line-height: 0px;
+    		clear: both;
+    		visibility: hidden;
+		}
+		.layout {
+			width: 100%;
+			max-width: 32rem;
+			min-width: 16rem;
+			background-color: #ccc;
+			margin: 0 auto;
+			padding: 2.5rem 0 4.8125rem 0;
+		}
+		.header{
+			width: 100%;
+			max-width: 32rem;
+			height: 2.5rem;
+			background-color: red;
+			position: fixed;
+			top: 0;
+			z-index: 999;
+		}
+		.merchant {
+			display: block;
+			line-height: 2.5rem;
+			text-align: center;
+			font-size: 1rem;
+			color: #fff;
+			text-decoration: none;
+		}
+		.banner {
+			width: 100%;
+			position: relative;
+		}
+		.top_banner {
+			width: 100%;
+			display: block;
+		}
+		.icon-fanhui {
+			display: block;
+			width: 2.5rem;
+			height: 2.5rem;
+			line-height: 2.5rem;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-decoration: none;
+			color: #fff;
+			font-size: 1rem!important;
+		}
+		.logo_03 {
+			position: absolute;
+			width: 4.84rem;
+			height: 4.84rem;
+			top: 1.25rem;
+			left: 1.56rem;
+		}
+		.company {
+			position: absolute;
+			left: 7.03rem;
+			color: #fff;
+			top: 2.1875rem;
+			font-size: 1rem;
+		}
+		.icon-zhankai-copy {
+			position: absolute;
+			top: 2.5rem;
+			right: 0.8rem;
+			text-decoration: none;
+			color: #fff;
+			font-size: 1.5rem;
+		}
+		.ul1 {
+			position: absolute;
+			top: 4.84rem;
+			left: 6.875rem;
+			list-style: none;
+		}
+		.ul1 li {
+			float: left;
+			background-color: #ff0000;
+			margin-right: 0.16rem;
+			border-radius: 0.16rem;
+			width: 0.9375rem;
+			height: 0.9375rem;
+		}
+		.ul1 li img {
+			display: block;
+			width: 0.9375rem;
+			height: 0.9375rem;
+		}
+		.ul2 {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			list-style: none;
+			padding: 15px 0;
+			color: #fff;
+			background-color: rgba(0,0,0,0.3);
+		}
+		.ul2 li {
+			float: left;
+			width: 33.33%;
+			text-align: center;
+		}
+		.ul2 li:nth-child(2) {
+			border-right: 1px solid #c9dddb;
+			border-left: 1px solid #c9dddb;
+			box-sizing: border-box;
+		}
+		ul2 li p {
+			font-size: 0.75rem;
+		}
+		.banner1 {
+			width: 100%;		
+		}
+		.ul3 {
+			width: 100%;
+			list-style: none;
+			margin-bottom: 10px;
+			background-color: #fff;
+		}
+		.ul3 li {
+			float: left;
+			width: 33.33%;
+			padding: 0.468rem 0;
+		}
+		.ul3 li:nth-child(3n-2),
+		 .ul3 li:nth-child(3n-1) {
+			border-right: 0.031rem solid #ccc;
+			box-sizing: border-box;
+		}
+		.ul3 li:nth-child(-n + 6) {
+			border-bottom: 0.031rem solid #ccc;
+			box-sizing: border-box;
+		}
+		.ul3 li a {
+			width: 100%;
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			font-size: 0.78rem;
+			color: #8c8c8c;			
+		}
+		.ul3 li img {
+			width: 2.1875rem;
+			height: 2.1875rem;
+		}
+		.ul4 {
+			width: 100%;
+			list-style: none;
+		}
+		.ul4 li {
+			width: 100%;
+		}
+		.ul4 li a {
+			display: block;
+			width: 100%;
+			text-decoration: none;
+		}
+		.ul4 li a p {
+			height: 1.2rem;
+			line-height: 1.2rem;
+			font-size: 0.8rem;
+			color: #999;
+		}
+		.ul4 li a img {
+			display: block;
+			width: 100%;
+		}
+
+		.footer  {
+			width: 100%;
+			max-width: 32rem;
+			min-width: 16rem;
+			position: fixed;
+			bottom: 0;
+			background-color: #fff;
+		}
+		.ul5 {
+			width: 100%;
+			list-style: none;
+
+
+		}
+
+		.ul5 li a {
+			text-decoration: none;
+			display: block;
+			width: 25%;
+			float: left;
+			text-align: center;
+			padding: 1rem 0;
+			color: #666666;
+
+		}
+		.ul5 li a i {
+			font-style: normal;
+			font-size: 1.5rem;
+		}
+		.ul5 li a p {
+			font-size: 1rem;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="layout">
+		<div class="header">
+			<a href="#" class="merchant">商家</a>
+			<a href="#" class="icon-fanhui iconfont"></a>
+		</div>
+		<div class="banner">
+			<img src="images/top_banner.png" alt="" class="top_banner">
+			<img src="images/logo_03.png" alt="" class="logo_03">
+			<p class="company">武汉中心黑马程序员</p>
+			<a href="#" class="icon-zhankai-copy iconfont"></a>
+			<ul class="ul1">
+				<li><a href="#"><img src="images/shop_vip.png" alt=""></a></li>
+				<li><a href="#"><img src="images/shop_silver.png" alt=""></a></li>
+				<li><a href="#"><img src="images/shop_umbrella.png" alt=""></a></li>
+			</ul>
+			<ul class="ul2">
+				<li>
+					<p>4</p>
+					<p>银元广告</p>
+				</li>
+				<li>
+					<p>2</p>
+					<p>红包广告</p> 
+				</li>
+				<li>
+					<p>0</p>
+					<p>竞价广告</p>
+				</li>
+			</ul>
+		</div>
+		<div class="banner1">
+			<ul class="ul3 clearfix">
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+				<li><a href="#">
+					<img src="images/ggao.png" alt="">
+					<p>红包广告</p>
+				</a></li>
+			</ul>
+			<ul class="ul4">
+				<li>
+					<a href="">
+						<img src="images/aab.png" alt="">
+						<p>百易同城</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/aab.png" alt="">
+						<p>百易同城</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/aab.png" alt="">
+						<p>百易同城</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/aab.png" alt="">
+						<p>百易同城</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/aab.png" alt="">
+						<p>百易同城</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/aab.png" alt="">
+						<p>百易同城</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/aab.png" alt="">
+						<p>百易同城</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/aab.png" alt="">
+						<p>百易同城</p>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="footer">
+
+			<ul class="ul5 clearfix">
+				<li>
+					<a href="#">
+						<i class="icon-shouye-copy iconfont"></i>
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="icon-shangjia2 iconfont"></i>
+						<p>商家</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="icon-fabu iconfont"></i>
+						<p>发布</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="icon-wode iconfont"></i>
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<script>
+		$(function() {
+			$(window).on("resize",function() {
+				var width = $(window).width();
+				var fontSize = width/20;
+				$('html').css("font-size",fontSize);
+			})
+		})
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+/*a:hover {
+	color: #2aaaff;
+}*/
+.box {
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	background-color: #fafafa;
+	height: 550px;
+}
+/*头部开始*/
+.header {
+	width: 100%;
+
+	height: 85px;
+	background-color: #0099ff;
+
+	
+}
+.us {
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+	line-height: 85px;
+}
+/*头部结束*/
+
+/*banner开始*/
+.banner {
+	width: 100%;
+	height: 350px;
+	background:  url(../images/bg.png)  no-repeat;
+	position: relative;
+	overflow: hidden;
+}
+.person {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+	border: 8px solid #fff;
+}
+.login {
+	display: block;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	margin-top: 260px;
+	text-decoration: none;
+	
+}
+.banner a:hover {
+	color: #00a4ff;
+
+}
+
+
+/*banner结束*/
+/*open开始*/
+.open {
+	width: 100%;
+	height: 20px;
+	background-color: #fafafa;
+}
+/*open结束*/
+
+/*nav开始*/
+.nav li {
+	height: 85px;
+	line-height: 85px;
+	background-color: #eee;
+	border-bottom: 1px solid #e6e6e6;
+	position: relative;
+	background-color: #fff;
+}
+.nav li a {
+	text-decoration: none;
+}
+.nav li i {
+	float: left;
+	padding-left: 30px;
+	font-size: 40px;
+}
+.nav li:first-child i {
+	color: #7be0fa;
+}
+.nav li:nth-child(2) i {
+	color: #da7ce2;
+}
+.nav li:last-child i {
+	color: #7be0fa;
+}
+
+.nav li span {
+	float: right;
+	color: #d9d9d9;
+	font-size: 28px;
+	font-weight: 700;
+	padding-right: 15px;
+}
+.nav li p {
+	font-size: 26px;
+	color: #666666;
+	position: absolute;
+	left: 100px;
+}
+/*nav结束*/
+
+
+/*footer开始*/
+.footer {
+	width: 100%;
+	height: 89px;
+	background-color:#fff;
+	margin-top: 298px;
+	border-top: 2px solid #e6e6e6;
+}
+.footer li {
+	float: left;
+	width: 33.33%;
+	height: 89px;
+	position: relative;
+}
+.footer li a {
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	text-decoration: none;
+}
+.footer li a:hover {
+	color: #2aaaff;
+}
+.footer li i {
+	font-size: 40px;
+	color: #666;
+
+}
+.footer li p {
+	font-size: 20px;
+	color: #666;
+}
+
+/*footer结束*/
